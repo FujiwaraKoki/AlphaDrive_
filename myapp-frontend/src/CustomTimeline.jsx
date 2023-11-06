@@ -24,11 +24,18 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
+        /*
         const db_data_custom_user = await axios.get('http://localhost:8000/users/CustomUser/');
         const db_data_shift_type = await axios.get('http://localhost:8000/manage/ShiftType/');
         const db_data_group_company = await axios.get('http://localhost:8000/manage/GroupCompany/');
         const db_data_employee_shift = await axios.get('http://localhost:8000/manage/EmployeeShift/');
         const db_data_max_office_hour = await axios.get('http://127.0.0.1:8000/manage/MaxOfficeHour/');
+        */
+        const db_data_custom_user = await axios.get('http://fujiwarakoki314.pythonanywhere.com//users/CustomUser/');
+        const db_data_shift_type = await axios.get('http://fujiwarakoki314.pythonanywhere.com//manage/ShiftType/');
+        const db_data_group_company = await axios.get('http://fujiwarakoki314.pythonanywhere.com//manage/GroupCompany/');
+        const db_data_employee_shift = await axios.get('http://fujiwarakoki314.pythonanywhere.com//manage/EmployeeShift/');
+        const db_data_max_office_hour = await axios.get('http://fujiwarakoki314.pythonanywhere.com//manage/MaxOfficeHour/');
 
         const custom_user = db_data_custom_user.data;
         const shift_type = db_data_shift_type.data;
